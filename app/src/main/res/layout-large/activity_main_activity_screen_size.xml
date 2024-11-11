@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <!-- First EditText for Num1 -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large Portrait Screen"
+        android:textSize="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editText_Num1"
+        android:layout_width="235dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="28dp"
+        android:hint="Number 1"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <!-- Second EditText for Num2 -->
+    <EditText
+        android:id="@+id/editText_Num2"
+        android:layout_width="236dp"
+        android:layout_height="60dp"
+        android:hint="Number 2"
+        android:layout_marginTop="20dp"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/editText_Num1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- EditText for Answer -->
+    <EditText
+        android:id="@+id/editText_Answer"
+        android:layout_width="239dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="20dp"
+        android:focusable="false"
+        android:hint="Result"
+        app:layout_constraintTop_toBottomOf="@id/editText_Num2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <!-- Button for Clear -->
+
+    <com.example.calculator.PatrickButton
+        android:id="@+id/button_Patrick"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="28dp"
+        android:background="?attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/patrickimage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_Add" />
+
+    <ImageButton
+        android:id="@+id/button_Clear"
+        android:layout_width="104dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/clearbutton"
+        app:layout_constraintTop_toBottomOf="@id/editText_Answer"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Button for Subtract -->
+    <ImageButton
+        android:id="@+id/button_Subtract"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="?attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/subtractbutton"
+        app:layout_constraintTop_toBottomOf="@id/editText_Answer"
+        app:layout_constraintStart_toEndOf="@id/button_Clear" />
+
+    <!-- Button for Multiply -->
+    <ImageButton
+        android:id="@+id/button_Multiply"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="?attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/multiplytbutton"
+        app:layout_constraintTop_toBottomOf="@id/editText_Answer"
+        app:layout_constraintStart_toEndOf="@id/button_Subtract" />
+
+    <!-- Button for Divide -->
+    <ImageButton
+        android:id="@+id/button_Divide"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="?attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/dividebutton"
+        app:layout_constraintTop_toBottomOf="@id/editText_Answer"
+        app:layout_constraintStart_toEndOf="@id/button_Multiply" />
+
+    <!-- Button for Add -->
+    <ImageButton
+        android:id="@+id/button_Add"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="?attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/addbutton"
+        app:layout_constraintTop_toBottomOf="@id/editText_Answer"
+        app:layout_constraintStart_toEndOf="@id/button_Divide" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,142 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp"
+    tools:context=".MainActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="xlarge Landscape Screen"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- First Input Field -->
+    <EditText
+        android:id="@+id/editText_Num1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="Enter Number 1"
+        android:inputType="numberDecimal"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <!-- Second Input Field -->
+    <EditText
+        android:id="@+id/editText_Num2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Number 2"
+        android:inputType="numberDecimal"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Num1" />
+
+    <!-- Answer Field (Read-only) -->
+    <EditText
+        android:id="@+id/editText_Answer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:focusable="false"
+        android:hint="Answer"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Num2" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Answer">
+
+
+        <com.example.calculator.PatrickButton
+            android:id="@+id/button_Patrick"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="204dp"
+            android:layout_marginTop="28dp"
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/patrickimage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_Add" />
+
+        <ImageButton
+            android:id="@+id/button_Clear"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Clear"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/clearbutton" />
+
+        <ImageButton
+            android:id="@+id/button_Subtract"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Subtract"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/subtractbutton" />
+
+        <!-- Multiply Button -->
+        <ImageButton
+            android:id="@+id/button_Multiply"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Multiply"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/multiplytbutton" />
+
+
+        <ImageButton
+            android:id="@+id/button_Divide"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Divide"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/dividebutton" />
+
+
+        <ImageButton
+            android:id="@+id/button_Add"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Add"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/addbutton" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
