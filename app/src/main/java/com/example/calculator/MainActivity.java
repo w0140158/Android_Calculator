@@ -175,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private static final double DIVISION_BY_ZERO = 0.0;
     private static final String ERROR_ZERO_DIVISION = "Cannot divide by zero";
-    private static final String ERROR_MESSAGE = "Invalid input"; // Already defined
+    private static final String ERROR_MESSAGE = "Invalid input";
 
     // Method to perform the calculation based on the operator
     private void performCalculation(char operator) {

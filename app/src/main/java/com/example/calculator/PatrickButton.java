@@ -22,7 +22,7 @@ public class PatrickButton extends androidx.appcompat.widget.AppCompatImageButto
     @Override
     public void onClick(View view) {
         Log.d("PatrickButton", "Patrick - Get my version Button Clicked!");
-        getMyVersion(view); // Call method to display version info
+        getMyVersion(view);
     }
 
     // Method to retrieve and display device version and screen information
